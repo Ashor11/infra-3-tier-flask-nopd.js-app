@@ -1,5 +1,5 @@
 resource "aws_vpc" "Agent" {
-  cidr_block = "var.vpc_cidr"
+  cidr_block = var.vpc_cidr
   enable_dns_support = true
   enable_dns_hostnames = true
 
@@ -10,7 +10,7 @@ tags = {
 
 resource "aws_subnet" "Zone1" {
   vpc_id     = aws_vpc.Agent.id
-  cidr_block = "var.public_subnets[0]"
+  cidr_block = var.public_subnets[0]
   availability_zone = "us-east-1a"
   map_public_ip_on_launch = true 
   tags = {
@@ -20,7 +20,7 @@ resource "aws_subnet" "Zone1" {
 
 resource "aws_subnet" "Zone2" {
   vpc_id     = aws_vpc.Agent.id
-  cidr_block = "var.public_subnets[1]"
+  cidr_block = var.public_subnets[1]
   availability_zone = "us-east-1b"
   map_public_ip_on_launch = true 
   tags = {
@@ -30,7 +30,7 @@ resource "aws_subnet" "Zone2" {
 
 resource "aws_subnet" "Zone3" {
   vpc_id     = aws_vpc.Agent.id
-  cidr_block = "var.public_subnets[3]"
+  cidr_block = var.public_subnets[2]
   availability_zone = "us-east-1c"
    map_public_ip_on_launch = true 
   tags = {
@@ -101,4 +101,3 @@ resource "aws_route_table_association" "az3" {
   subnet_id      = aws_subnet.Zone3.id
   route_table_id = aws_route_table.RouteTable.id
 }
-
