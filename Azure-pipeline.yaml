@@ -65,7 +65,7 @@ stages:
       steps:
         - checkout: self
         - script: |
-            aws eks update-kubeconfig --region us-east-1 --name my-eks-cluster
+            aws eks update-kubeconfig --region us-east-1 --name EKS_Cluster
           displayName: 'Update kubeconfig'
           
         - script: |
