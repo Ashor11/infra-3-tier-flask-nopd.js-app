@@ -1,4 +1,4 @@
-![1](https://github.com/user-attachments/assets/7baf2748-f07c-4c52-b2b0-1e106375fc31)# 3-Tier Flask Application on AWS EKS with Terraform
+# 3-Tier Flask Application on AWS EKS with Terraform
 
 This project provisions a 3-tier architecture for a Flask application on AWS using EKS (Elastic Kubernetes Service) and Terraform. It includes automated infrastructure provisioning, networking, and CI/CD integration with Azure Pipelines.
 ![1](https://github.com/user-attachments/assets/ceedaee3-b5fb-4e98-a4f4-d6ff6a98555b)
